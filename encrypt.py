@@ -3,6 +3,7 @@ from Crypto.Util.Padding import pad
 
 key = b'mysecretpassword'
 
+iv = Random.new().read(AES.block_size)
 cipher = AES.new(key,AES.MODE_CBC)
 
 plaintext = b'this is my super secret message to encrypt'
